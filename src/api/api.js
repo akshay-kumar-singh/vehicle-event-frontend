@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/api";
+// const API_URL = "http://localhost:5000/api";
+const API_URL = "https://vehicle-event-backend.onrender.com/api";
 
 export const getAllEvents = async () => {
   try {
@@ -24,7 +25,9 @@ export const getEventsByType = async (eventType) => {
 
 export const getEventsByTime = async (start, end) => {
   try {
-    const response = await axios.get(`${API_URL}/events/time?start=${start}&end=${end}`);
+    const response = await axios.get(
+      `${API_URL}/events/time?start=${start}&end=${end}`
+    );
     return response.data;
   } catch (error) {
     console.error("Error fetching events by time:", error);
