@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# 🚗 Vehicle Event Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple web application to visualize vehicle event data from a `data.json` file. It includes event filtering, interactive charts, and a dynamic UI with a shimmer effect for smooth loading.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### 🛠 Live Demo 
+https://67ecf15b07800363f4403322--vehicle-events.netlify.app/
+---
 
-### `npm start`
+## 📌 Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+✅ Display vehicle event data in a structured table  
+✅ Filter events by **type** (Ignition On, Ignition Off, Time Interval)  
+✅ Filter events by **time range** using datetime pickers  
+✅ **Interactive charts** to visualize Speed, Fuel Level, and Engine Temperature using **Chart.js**  
+✅ **Shimmer UI** for a smooth loading experience  
+✅ Simple API simulation using **data.json** (no database required)  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **Frontend**  
+- ⚛️ React.js  
+- 📊 Chart.js (for graphical visualization)  
+- 🎨 CSS (for styling)  
 
-### `npm run build`
+### **Backend (Simulated with JSON File)**  
+- 🚀 Express.js (Node.js framework)  
+- 🔗 CORS (Cross-Origin Resource Sharing)  
+- 📂 Data fetched from `data.json` (no database required)  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **State Management**  
+- ⚡ React Hooks (`useState`, `useEffect`)  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📊 Data Visualization
+The application uses **Chart.js** to create real-time graphs based on vehicle event data:
 
-### `npm run eject`
+- **Speed Trends** (km/h)  
+- **Fuel Level** (%)  
+- **Engine Temperature** (°C)  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 🛠 API Endpoints  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET`  | `/api/events` | Fetch all vehicle events |
+| `GET`  | `/api/events/type/:eventType` | Filter events by type |
+| `GET`  | `/api/events/time?start=YYYY-MM-DD&end=YYYY-MM-DD` | Filter events by time range |
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **1️⃣ Run the Project**
+```bash
+cd client
+npm install
+npm start
