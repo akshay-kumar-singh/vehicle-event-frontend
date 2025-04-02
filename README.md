@@ -4,6 +4,10 @@ A simple web application to visualize vehicle event data from a `data.json` file
 
 ---
 
+### 🛠 Live Demo 
+https://67ecf15b07800363f4403322--vehicle-events.netlify.app/
+---
+
 ## 📌 Features
 
 ✅ Display vehicle event data in a structured table  
@@ -32,10 +36,28 @@ A simple web application to visualize vehicle event data from a `data.json` file
 
 ---
 
-## 🚀 Usage
+### 📊 Data Visualization
+The application uses **Chart.js** to create real-time graphs based on vehicle event data:
 
-### **1️⃣ Run the Backend**
+- **Speed Trends** (km/h)  
+- **Fuel Level** (%)  
+- **Engine Temperature** (°C)  
+
+---
+
+### 🛠 API Endpoints  
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| `GET`  | `/api/events` | Fetch all vehicle events |
+| `GET`  | `/api/events/type/:eventType` | Filter events by type |
+| `GET`  | `/api/events/time?start=YYYY-MM-DD&end=YYYY-MM-DD` | Filter events by time range |
+
+---
+
+
+### **1️⃣ Run the Project**
 ```bash
-cd server
+cd client
 npm install
 npm start
